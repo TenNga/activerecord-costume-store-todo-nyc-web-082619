@@ -7,7 +7,7 @@ class CreateHauntedHouses < ActiveRecord::Migration[5.1]
       t.string :theme
       t.decimal :price 
       t.boolean :still_in_business
-      t.timestamps
+      t.date
       t.string :description
     end
   end
