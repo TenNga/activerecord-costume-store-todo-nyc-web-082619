@@ -10,6 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 3) do
+
+  create_table "costume_stores", force: :cascade do |t|
+    t.string "name"
+    t.string "location"
+    t.integer "costume_inventory"
+    t.integer "number_of_employees"
+    t.boolean "still_in_business"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "costumes", force: :cascade do |t|
+    t.string "name"
+    t.decimal "price"
+    t.string "size"
+    t.string "image_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "haunted_houses", force: :cascade do |t|
+    t.string "name"
+    t.string "location"
+    t.string "theme"
+    t.decimal "price"
+    t.boolean "still_in_business"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "description"
+  end
 
 end
